@@ -1,0 +1,56 @@
+﻿body {
+}
+
+.cartao-container {
+    justify-content: space-around;
+    position: relative;
+    
+}
+
+.cartao-promocao {
+    width: 200px;
+    margin-bottom: 25px;
+    box-shadow: 0 0 22px -6px rgba(0,0,0,0.42);
+    border-radius: 5px;
+    min-height: 480px;
+}
+
+    .cartao-promocao:hover {
+        transform: scale(1.15);
+        transition: 0.5s ease;
+        cursor: pointer;
+    }
+
+.cartao-promocao img{
+    width: auto;
+    height:180px;
+}
+
+
+.cartao-body {
+    position: relative;
+    margin-top: 10px;
+
+}
+
+.cartao-preco {
+
+    position: absolute;
+    width: 100px;
+    height: 45px;
+    border-radius: 30% 30% 0 0 ;
+    background: white;
+    font-size: 1.8rem;
+    color: #ff0000;
+    left: calc(50% - 50px);
+    top: -45px;
+    text-align: center;
+    justify-items: center;
+    font-weight: 900;
+}
+cartao-botao {
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("https://images.pexels.com/photos/1271619/pexels-photo-1271619.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}

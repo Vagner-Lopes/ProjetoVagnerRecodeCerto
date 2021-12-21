@@ -1,0 +1,59 @@
+﻿<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - CodeAndTravel</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+    <link rel="stylesheet" href="~/css/cards.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-dark bg-dark  fixed-top " style="height: 80px; font-weight: 300; justify-content: space-around">
+            
+            <div class="container  justify-content-between" style="justify-content: space-around">
+                
+                <a class="navbar-brand font-weight-bolder text-sm-left  text-light bg-dark" style="font-size: 1.4rem" asp-area="" asp-controller="Home" asp-action="Index">CodeAndTravel</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between  text-light bg-dark ">
+                    <ul class="navbar-nav flex-grow-1">
+                        <li class="nav-item">
+                            <a class="nav-link text-light  menu-nav-li" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-light  menu-nav-li" asp-area="" asp-controller="Destinos" asp-action="Index">Destinos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-light  menu-nav-li" asp-area="" asp-controller="Promocoes" asp-action="Index">Promoções</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-light  menu-nav-li" asp-area="" asp-controller="Home" asp-action="Privacy">Contatos</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div class="padding-cover"></div>
+    </header>
+    <div class="container-fluid" style=" margin: 0; padding: 0;">
+        <main role="main" class="pb-0"  style=" margin: 0; padding: 0;">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="border-top footer text-muted footer bg-dark text-light" style="height: 60px; width: 100vw;  margin: 0; padding: 0;">
+        <div class="container-fluid">
+            <p class="px-5"> &copy; 2021 - CodeAndTravel - <a asp-area="" asp-controller="Home" asp-action="Privacy">Contatos</a></p>
+        </div>
+    </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

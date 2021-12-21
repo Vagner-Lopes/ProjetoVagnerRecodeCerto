@@ -1,0 +1,41 @@
+﻿@model IEnumerable<CodeAndTravel.Models.Promocao>
+
+@{
+    ViewData["Title"] = "Promoções";
+}
+
+
+<div class="container">
+    <h1>Promoções</h1>
+    <p>
+        <a asp-action="Create" class="btn btn-primary">Criar Promoção</a>
+    </p>
+
+
+    <div class="row cartao-container">
+        @foreach (var item in Model)
+        {
+            <div class="row">
+                <div class="col col-sm-6 col-md-4 col-lg-3 col-xl-2">
+                    <div class="card cartao-promocao">
+                        <img class="card-img-top" src="@Html.DisplayFor(modelItem => item.Destino.ImgURL)" alt="ADD uma Imagem">
+                        <div class="card-body cartao-body">
+                            <div class="cartao-preco">
+                                @Html.DisplayFor(modelItem => item.Desconto)%
+                            </div>
+                            <h3 class="card-title">@Html.DisplayFor(modelItem => item.Nome)</h3>
+                            <h5>@Html.DisplayFor(modelItem => item.Destino.Nome)</h5>
+                            <p class="card-text">@Html.DisplayFor(modelItem => item.Descricao)</p>
+                            <div class="justify-content-between cartao-botoes">
+                                <!--<a href="#" class="btn btn-primary stretched-link">See Profile</a>-->
+                                <a asp-action="Edit" asp-route-id="@item.ID" class="btn btn-warning"><i class="fas fa-user-edit"></i></a> 
+                                <a asp-action="Details" asp-route-id="@item.ID" class="btn btn-info"><i class="fas fa-info-circle"></i></a>
+                                <a asp-action="Delete" asp-route-id="@item.ID" class="btn btn-danger"><i class="fas fa-user-times"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>

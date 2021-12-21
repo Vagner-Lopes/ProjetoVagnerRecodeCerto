@@ -1,0 +1,270 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', Helvetica, sans-serif;
+}
+
+
+/*================Menu================*/
+
+a {
+    font-size: 22px;
+    text-decoration: none;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 40px;
+    font-size: 1.1rem;
+    background: #111;
+    color: #eee;
+    border-radius: 5px;
+    transition: background 500ms ease;
+}
+
+.btn:hover {
+    cursor: pointer;
+    background: rgb(88, 88, 88);
+}
+
+#navbar {
+    width: 100%;
+    height: 60px;
+    background: #111;
+    color: #eee;
+    position: absolute;
+    position: fixed;
+    
+    
+}
+
+#navbar-content {
+    width: 80%;
+    height: 100%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo {
+    font-size: 2rem;
+}
+
+#navbar-items {
+    display: flex;
+    list-style: none;
+
+}
+
+#navbar-items li {
+    padding: 8px;
+}
+
+a {
+    text-decoration: none;
+    color: #eee;
+}
+
+.padding-fixed {
+    height: 60px;
+}
+
+/*================Home================*/
+
+#showcase {
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #eee;
+    background: url(./fotos/pexels-4.jpg) no-repeat center center/cover;
+    background-color: rgba(0, 0, 0, 0.3);
+    background-blend-mode: color;
+
+
+}
+
+#showcase-container {
+    text-align: center;
+}
+
+#showcase-container h2 {
+    font-size: 2.5rem;
+}
+
+#showcase-container p {
+    font-size: 1.2rem;
+    padding: 7px 0 20px 0;
+}
+
+.headline {
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-align: center;
+    padding-bottom: 50px;
+    letter-spacing: 2px;
+}
+
+/*================Rodapé================*/
+
+#footer{
+    position: fixed;
+    background: #222;
+    color: #eee;
+    display: flex;
+    padding: 20px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    left: 0;
+    bottom: 0;
+    width: 100%;     
+       
+}
+
+#footer h4 {
+    padding: 0 20px;
+    
+}
+/*============Promoção=============*/
+
+
+
+.card-container {
+    justify-content: space-around;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 30px;
+    margin: auto;
+    width: 90%;
+    padding: 50px;
+
+
+}
+
+.card {
+    
+    border:solid 1px #888;
+    max-width: 250px;
+    max-height: 450px;
+    text-align: center;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1);
+    border-radius: 5px;  
+}
+
+  /*================Contatos================*/
+  .card3 {
+    display: grid;
+    grid-template-columns: 200px;
+    grid-template-rows: 210px 210px 80px;
+    grid-template-areas: "image" "text" "stats";
+    border-radius: 18px;
+    background: white;
+    box-shadow: 5px 5px 15px rgba(0,0,0,0.9);
+    font-family: roboto;
+    text-align: center;
+
+    background-repeat: no-repeat;
+    box-shadow: 0 0 6px 2px rgba(218, 216, 198, 0.75), 0 35px 25px -15px rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    padding:0; 
+    background-image: url(./fotos/pexels-4.jpg);  
+    background-size: cover;
+
+    
+  }
+
+  .card3:hover{
+    transform: scale(1.1);
+    cursor: pointer;
+  }
+  
+
+  .card-text {
+    grid-area: text;
+    position: relative;
+
+  }
+
+  .caixa{
+    position: absolute;
+    width: 100px;
+    height: 40px;
+    background: rgb(238, 18, 55);
+    border-radius: 70%;
+    left: calc(50% - 50px);
+    top: -45px;
+    margin-bottom: 40px;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.8rem;
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    border:solid rgb(44, 3, 8) 0px;
+    
+
+  }
+
+  .card-stats {
+    grid-area: stats;
+    display: none;
+  }
+  
+
+  
+
+  .card-text {
+    grid-area: text;
+    margin: 25px;
+  }
+  .card-text .date {
+    color: rgb(255, 7, 110);
+    font-size:13px;
+  }
+  .card-text p {
+    color: grey;
+    font-size:15px;
+    font-weight: 300;
+  }
+  .card-text h2 {
+    margin-top:0px;
+    font-size:28px;
+  }
+
+  .card-stats {
+    grid-area: stats; 
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    background: rgb(7, 147, 255);
+    
+  }
+
+  .card-stats .stat {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: white;
+    padding:10px;
+    
+  }
+
+  .card:hover {
+    transform: scale(1.15);
+    box-shadow: 5px 5px 15px rgba(0,0,0,0.6);
+  }
+  .card3 {
+  
+    transition: 0.5s ease;
+    cursor: pointer;
+    margin:30px;
+  }
+ /*ssssssssssssssssdddddsssssssssssssss*/
